@@ -11,11 +11,11 @@ int main() {
 	char d = 1;
 	
 	if (a > b && a < c)	{
-		printf("Condição 1 verdadeira \n");
+		printf("CondiÃ§Ã£o 1 verdadeira \n");
 	} if(c == d || d == a) {
-		printf("Condição 2 verdadeira \n");
+		printf("CondiÃ§Ã£o 2 verdadeira \n");
 	} else {
-		printf("Nenhuma condição verdadeira \n");
+		printf("Nenhuma condiÃ§Ã£o verdadeira \n");
 	}
 	
 	return 0;
