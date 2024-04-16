@@ -5,11 +5,11 @@
 int main() {
 	setlocale(LC_ALL, "portuguese");	
 		
-    int myNum = 10; // Positivo ou negativo?
+    int num = 10; // Positivo ou negativo?
 
-    if (myNum > 0) {
+    if (num > 0) {
         printf("O número é positivo.");
-   } else if (myNum < 0) {
+   } else if (num < 0) {
         printf("O número é negativo.");
    } else {
         printf("O valor é 0");
