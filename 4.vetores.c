@@ -10,25 +10,69 @@ mas todas compartilham o mesmo nome e tipo. São associados índices a esse nome
 posições do vetor. O array unidimensional também é conhecido por vetor, enquanto o array 
 multidimensional é denominado de matriz. */
 
-#include <stdlib.h>
-#include <locale.h>
+// Lendo Valores do Usuário para um Vetor: 
 
 int main() {
-	setlocale(LC_ALL, "portuguese");			  
+    int i;
+    int tamanho = 5;
+    int numeros[tamanho];
 
-    int numeros[5]; // Declarando vetor
-    numeros[0] = 1;
-    numeros[1] = 2;
-    numeros[2] = 3;
-    numeros[3] = 4;
-    numeros[4] = 5;
+    // Lendo valores do usuário
+    for (i = 0; i < tamanho; i++) {
+        printf("Digite o %do número: ", i + 1);
+        scanf("%d", &numeros[i]);
+    }
 
-    printf("Elemento 1: %d\n", numeros[0]);
-    printf("Elemento 2: %d\n", numeros[1]);
-    printf("Elemento 3: %d\n", numeros[2]);
-    printf("Elemento 4: %d\n", numeros[3]);
-    printf("Elemento 5: %d\n", numeros[4]);
-	
-	return 0;
-	
-	}
+    // Exibindo os valores lidos
+    printf("Valores lidos:\n");
+    for (i = 0; i < tamanho; i++) {
+        printf("%d ", numeros[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+// Encontrando o Maior Elemento em um Vetor
+
+int main() {
+    int i;
+    int tamanho = 5;
+    int numeros[tamanho];
+    int maior;
+
+    // Lendo valores do usuário
+    for (i = 0; i < tamanho; i++) {
+        printf("Digite o %do número: ", i + 1);
+        scanf("%d", &numeros[i]);
+
+        // Atualizando o maior valor
+        if (i == 0 || numeros[i] > maior) {
+            maior = numeros[i];
+        }
+    }
+
+    printf("O maior número é: %d\n", maior);
+    return 0;
+}
+
+// Calculando a Média dos Valores em um Vetor
+
+int main() {
+    int i;
+    int tamanho = 5;
+    int numeros[tamanho];
+    int soma = 0;
+    float media;
+
+    // Lendo valores do usuário
+    for (i = 0; i < tamanho; i++) {
+        printf("Digite o %do número: ", i + 1);
+        scanf("%d", &numeros[i]);
+        soma += numeros[i];
+    }
+
+    media = (float)soma / tamanho;
+    printf("A média dos números é: %.2f\n", media);
+    return 0;
+}
